@@ -3,9 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${browser}      chrome
-${url}      http://65.21.6.71:7060/alstom-icc/#/
-
-#http://127.0.0.1:8080/#/
+${url}      your_website_url
 
 *** Keywords ***
 LaunchBrowser
@@ -47,21 +45,4 @@ MapHorizontal
     FOR    ${i}    IN    1       5
     DRAG AND DROP BY OFFSET   xpath://*[@id=\"map\"]/div[4]/div[1]/div    -60    0
     END
-OpenSchematicView
-#    open browser     http://65.21.6.71:7060/alstom-icc/#/home/svg-line    chrome
-    sleep    5
-    set selenium implicit wait    5
-    click element    xpath://i[@class='fa-solid fa-bars']
-    click element    xpath://li[text()='Schematic View']
-OpenMapview
-#    open browser     http://65.21.6.71:7060/alstom-icc/#/home/map-view    chrome
-    set selenium implicit wait    5
-    click element    xpath://i[@class='fa-solid fa-bars']
-    set selenium implicit wait    5
-    click element    xpath://li[text()='Map View']
-
-OpenTraingraph
-    set selenium implicit wait    10
-    click element    xpath://i[@class='fa-solid fa-bars']
-    set selenium implicit wait    10
-    click element    xpath://span[text()='Train Graph']
+    
